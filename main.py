@@ -35,7 +35,6 @@ def analyze():
         buy_entry = last_close
         buy_sl = buy_entry - 2
         buy_tp = buy_entry + 4
-
         sell_sl = buy_entry + 2
         sell_tp = buy_entry - 4
 
