@@ -7,8 +7,12 @@ app = Flask(__name__)
 
 DATA_FOLDER = "assets"
 LOG_FOLDER = "logs"
-os.makedirs(DATA_FOLDER, exist_ok=True)
-os.makedirs(LOG_FOLDER, exist_ok=True)
+
+if not os.path.exists(DATA_FOLDER):
+    os.makedirs(DATA_FOLDER)
+
+if not os.path.exists(LOG_FOLDER):
+    os.makedirs(LOG_FOLDER)
 
 @app.route('/')
 def index():
